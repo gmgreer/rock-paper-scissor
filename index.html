@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+        <header class="header">
+            <h1 class="main-heading">Rock Paper Scissors</h1>
+        </header>
+        
+    <div class="instructions">
+        <h2 class="instruct">First to Five wins, WINS</h3>
+    </div>
+    <div class="messaging">
+        <h3 class="win-message" id="win-lose">Who will win?</h3>
+        <p class="method-message" id="method">select your weapon!</p>
+    </div>
+    <div class="display">
+        <div class="display-card">
+            <div class="score" id="player-score">?</div>
+            <p class="score-counter" id="player-counter">Player: 0</p>
+        </div>
+        <div class="display-card">
+            <div class="score" id="computer-score">?</div>
+        <p class="score-counter" id="computer-counter">Computer: 0</p>
+        </div>
+        
+    </div>
+    <div class="buttons">
+        <button class="button" id="rock" onclick="fight('rock')">👊🏽</button>
+        <button class="button" id="paper" onclick="fight('paper')">✋🏽</button>
+        <button class="button" id="scissor" onclick="fight('scissor')">✌🏽</button>
+    </div>
+
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
