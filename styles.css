@@ -58,12 +58,14 @@ body {
     width: 125px;
     border: 3px solid red;
     background-color: red;
+    border-radius: 50%;
 }
 
 .button:hover {
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 0 20px 1px red;
+    
 }
 
 .modal {
@@ -95,5 +97,20 @@ body {
     transform: scale(1.1);
     box-shadow: 0 0 20px 1px red;
     
+}
+
+#rock:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👊🏽</text></svg>")
+      16 0, auto;
+}
+
+#paper:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>✋🏽</text></svg>")
+      16 0, auto;
+}
+
+#scissor:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>✌🏽</text></svg>")
+      16 0, auto;
 }
 
