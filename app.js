@@ -9,14 +9,46 @@ const playerCount = document.getElementById("player-counter")
 const computerCount = document.getElementById("computer-counter")
 const winMessage = document.getElementById("win-lose")
 const method = document.getElementById("method")
+const closeModal = document.querySelector(".close-modal")
+const modal = document.querySelector("#modal")
+const endMessage = document.getElementById("modal-message")
+const openMode = document.querySelector(".open-modal")
 
-if (playerScore >= 5 || computerScore >= 5) {
-    
+
+
+
+const reset = () => {
+    playerScore = 0
+    computerScore = 0
+   playerCount.innerHTML = "Player: 0"
+   computerCount.innerHTML = "Computer: 0"
 }
+
+closeModal.addEventListener('click', () => {
+    reset()
+    modal.close();
+})
 
 const fight = (option) => {
 let comp = random()
 
+if (playerScore > 4 || computerScore > 4) {
+   
+    if(playerScore === 5) {
+        console.log("player wins")
+        endMessage.innerHTML = "YOU WIN!!!"
+        modal.showModal()
+        return
+        
+    }
+    if (computerScore === 5) {
+        console.log("computer wins")
+        endMessage.innerHTML = "YOU LOSE!!!"
+        modal.showModal()
+        return
+    }
+    
+}
 if (option === "rock" && comp === "rock") {
     winMessage.innerHTML = "You Tie";
     method.innerHTML = "Rock vs. Rock = Rock?";
@@ -87,6 +119,8 @@ if (option === "scissor" && comp === "scissor") {
 
 
 }
+
+
 
 const random = () => {
     let num = Math.floor(Math.random() * 3)
